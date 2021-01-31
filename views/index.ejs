@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node file uploads</title>
+</head>
+<body>
+    <h1>File Upload</h1>
+
+    <button> <a href="/table" target="_blank"> Tabella </a></button>
+    <br><br>
+    <%= typeof msg != 'undefined' ? msg : '' %>
+    <form method="post" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file">
+        <br><br>
+        Indirizzo: <input type="text" name="location">
+        <br><br>
+        Data: <input type="date" name="date">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <img src="<%= typeof file != 'undefined' ? file : '' %>">
+    
+</body>
+</html>
