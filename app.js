@@ -36,7 +36,7 @@
         console.log(`connected as id ${connection.threadId}`)
 
 
-        connection.query('SELECT * from inquinamento', (err, rows) => {
+        connection.query('SELECT location, date from inquinamento', (err, rows) => {
             connection.release() //return the connection to pool
 
             if(!err) {
